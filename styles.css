@@ -90,7 +90,6 @@ body {
 }
 
 .shop {
-  /* width: 100vw; */
   margin-left: 12rem;
   display: grid;
   grid-template: repeat(1fr, 5) / repeat(1fr, 4);
@@ -110,6 +109,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 .shop__item--1 {
@@ -148,7 +148,7 @@ body {
 .favourites-addtocart {
   position: absolute;
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-content: center;
   background-color: rgba(175, 175, 175, 0.472);
@@ -159,7 +159,9 @@ body {
 }
 
 .price {
-  margin: 1.75rem 0 0 1.75rem;
+  position: absolute;
+  top: 1.5rem;
+  /* margin: 1.75rem 0 0 1.75rem; */
   padding: 1.2rem;
   background-color: rgba(255, 255, 255, 0.664);
   height: 1%;
@@ -175,6 +177,7 @@ body {
   justify-content: center;
   padding: 1.75rem;
   width: 15%;
+  height: 15%;
 }
 
 .heart,
@@ -191,24 +194,23 @@ body {
 }
 
 .addtocart {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 60%;
+  height: 100%;
   align-items: flex-start;
   justify-content: flex-end;
   color: rgb(71, 68, 68);
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
+  padding: 1rem;
 }
 .sizes {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* .sizes:hover {
-  cursor: pointer;
-} */
 
 .size {
   display: flex;
@@ -226,6 +228,10 @@ body {
   cursor: pointer;
 }
 
+.size:active {
+  background-color: #bdbcbcda;
+}
+
 .add {
   padding: 1rem;
   background-color: #ffffffda;
@@ -237,9 +243,63 @@ body {
   align-items: center;
   justify-content: space-between;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 .add:hover {
   cursor: pointer;
+}
+
+.availability {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  right: 1.5rem;
+  bottom: 3.5rem;
+  width: 25%;
+  font-size: 0.98rem;
+  background-color: rgba(255, 255, 255, 0.705);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+.available {
+  color: #3f3e3e;
+}
+
+.colors {
+  /* margin-top: 0.5rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 5px;
+  display: flex;
+  margin-right: 0.3rem;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.black {
+  background-color: #000;
+}
+
+.visible {
+  display: flex;
+}
+
+.hidden {
+  display: none;
 }
