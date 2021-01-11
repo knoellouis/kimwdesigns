@@ -1,21 +1,46 @@
-const display = document.querySelectorAll('.favourites-addtocart');
+const display = document.querySelectorAll('.sizes-addtocart');
 const shopItem = document.querySelectorAll('.shop__item');
+const shopItemImg = document.querySelectorAll('.shop__item--img');
+const expand = document.querySelectorAll('.expand');
+const size = document.querySelectorAll('.size');
+const hearts = document.querySelectorAll('.heart');
+const heartsFilled = document.querySelectorAll('.heart-filled');
 
-// const changeDisplayVisibile = function () {
-//   display.style.display = 'flex';
-//   console.log('display visible');
-// };
+// const sizes = [xs.textContent, s.textContent, m.textContent, l.textContent];
 
-// const changeDisplayHidden = function () {
-//   display.style.display = 'none';
-//   console.log('display hidden');
-// };
+// shopItem.forEach((item, i) => {
+//   item.addEventListener('mouseenter', () => {
+//     display[i].style.display = 'flex';
+//   });
+//   item.addEventListener('mouseleave', () => {
+//     display[i].style.display = 'none';
+//   });
+// });
 
-shopItem.forEach((item, i) => {
-  item.addEventListener('mouseenter', () => {
-    display[i].style.display = 'flex';
+hearts.forEach((h, i) => {
+  h.addEventListener('click', () => {
+    heartsFilled[i].classList.remove('heart-filled-hidden');
   });
-  item.addEventListener('mouseleave', () => {
-    display[i].style.display = 'none';
+});
+
+heartsFilled.forEach((hf, i) => {
+  hf.addEventListener('click', () => {
+    heartsFilled[i].classList.add('heart-filled-hidden');
+  });
+});
+
+shopItemImg.forEach((img, i) => {
+  img.addEventListener('mouseenter', () => {
+    expand[i].style.display = 'block';
+  });
+
+  img.addEventListener('mouseleave', () => {
+    expand[i].style.display = 'none';
+  });
+});
+
+size.forEach((s, i) => {
+  s.addEventListener('click', () => {
+    size[i].classList.toggle('size-active');
   });
 });
