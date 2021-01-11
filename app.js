@@ -3,6 +3,7 @@ const shopItem = document.querySelectorAll('.shop__item');
 const shopItemImg = document.querySelectorAll('.shop__item--img');
 const expand = document.querySelectorAll('.expand');
 const size = document.querySelectorAll('.size');
+const popupSize = document.querySelectorAll('.popup__size');
 const hearts = document.querySelectorAll('.heart');
 const heartsFilled = document.querySelectorAll('.heart-filled');
 
@@ -42,5 +43,11 @@ shopItemImg.forEach((img, i) => {
 size.forEach((s, i) => {
   s.addEventListener('click', () => {
     size[i].classList.toggle('size-active');
+  });
+});
+
+popupSize.forEach((pus, i) => {
+  pus.addEventListener('click', () => {
+    popupSize[i].classList.toggle('size-active-popup');
   });
 });
