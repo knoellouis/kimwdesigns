@@ -208,10 +208,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 1.1rem;
 }
 
 .shop__item--img {
   width: 100%;
+  border-radius: 0 0 1.1rem 1.1rem;
 }
 
 .sizes-addtocart {
@@ -224,6 +226,7 @@ body {
   height: 23%;
   align-content: center;
   background-color: rgba(231, 226, 226);
+  border-radius: 0 0 1.1rem 1.1rem;
   font-size: 1.1rem;
   font-weight: 400;
 }
