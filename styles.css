@@ -566,15 +566,15 @@ body {
 
   .shop {
     margin: 2rem 0 4rem 0;
-    padding: 2rem 30rem;
+    padding: 2rem 25rem;
   }
 
   .header {
-    padding: 3rem 30rem;
+    padding: 3rem 25rem;
   }
 
   .footer {
-    padding: 5rem 30rem;
+    padding: 5rem 25rem;
   }
 }
 
